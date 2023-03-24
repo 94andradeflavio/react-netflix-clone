@@ -1,5 +1,5 @@
-const API_KEY = '158444f340c3620e4aa5bcd3d8b55503';
-const API_BASE = 'https://api.themoviedb.org/3';
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY
+const API_BASE = process.env.REACT_APP_TMDB_API_BASE
 
 // - originais da netflix
 // - recomendados
@@ -20,6 +20,7 @@ const basicFetch = async (endpoint) => {
 
 const Tmdb = {
     getHomeLIst: async () => {
+
         return [
             {
                 slug: 'originals',
